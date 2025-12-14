@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<title>CodeNexus</title>
+	<!----Linking google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<!----font-awsome start-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!----font-awsome ends-->
+
+		<!----css file link-->
+	
+	<link rel="stylesheet" type="text/css" href="css/signupstyle.css">
+
+	   <!----favicon setting-->
+	<link rel="shortcut icon" type="text/css" href="img/logo2.png">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!----------email notification-------->
+
+
+</head>
+<body>
+			<!---Navigation Starts	----->
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!------Responsive Button---->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+
+
+				</button>
+
+				<h1 style="color: white;margin-top: 10px;" id="myhead">CodeNexus</h1>
+			</div>
+			<!-- <div class="collapse navbar-collapse" id="navi">
+                 Navigation menus starts
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="">Home</a></li>
+					<li> <a href="">Our Service</a></li>
+					<li> <a href="">Works</a></li>
+					<li> <a href="">Team</a></li>
+					<li> <a href="">About</a></li>
+					<li> <a href="">Carrier</a></li>
+					<li> <a href="" id="our-location" class="btn-success" data-target="#mymodal" data-toggle="modal">Login/Signup</a></li>
+				</ul>
+	                 --Navigation menus ends---
+			</div> -->
+		</div>
+	</nav>
+			<!---Navigation Ends	----->
+			<video id="video-background" autoplay muted loop>
+				<source src="langbackvid.mp4" type="video/mp4">
+				<!-- Add additional source elements for different video formats -->
+			  </video>
+			<!---Slider Section starts	------->
+			<section class="slider text-center" id="slider">
+				<div class="modal-dialog ">
+					<div class="modal-content">
+						<h3 id="login-heading">SIGN UP</h3>
+						
+					<div class="modal-body" >
+						<div class="left-box">
+						<form method="POST" action="registration.php"> 
+							<div class="form-group">
+								<label><i class="fa fa-user fa-2x"></i>&nbspUsername   :</label>
+								<input type="text" name="name" class="form-control" placeholder="Username@12" required>
+
+								<label><i class="fa fa-lock fa-2x"></i>&nbspPassword   :</label>
+								<input type="text" name="password" class="form-control" id="pwd"placeholder="Password@12"required>
+
+								<label><i class="fa fa-user fa-2x"></i>&nbspConfirm Pass :</label>
+								<input type="text" name="confirm_password" class="form-control" id="cpwd"placeholder="Re-enter Password"required>
+
+								<label><i class="fa fa-lock fa-2x"></i>&nbspEmail Address :</label>
+								<input type="text" name="email" class="form-control"placeholder="example@gmail.com"required>
+								<div id="errorlabel"></div>
+								
+								<button id="btn-login" type="submit">Signup</button>
+
+							</div>
+						</form>
+					</div>
+					
+			
+					    <div class="right-box text-center">
+							<span class="signinwith"  style="color:beige;">Sign in With</span>
+							<div class="social-buttons">
+								<a href="redirect.php?provider=google">
+									<button type="button" class="btn btn-danger btn-block" style="margin: 5px 0;">
+										<i class="fa fa-google"></i> Log in with Google
+									</button>
+								</a>
+								<a href="redirect.php?provider=github">
+									<button type="button" class="btn btn-default btn-block" style="margin: 5px 0; background-color:#333; color:white;">
+										<i class="fa fa-github"></i> Log in with GitHub
+									</button>
+								</a>
+								<a href="redirect.php?provider=linkedin">
+									<button type="button" class="btn btn-primary btn-block" style="margin: 5px 0; background-color:#0077B5;">
+										<i class="fa fa-linkedin"></i> Log in with LinkedIn
+									</button>
+								</a>
+								
+							</div>
+							
+					</div>		
+				</div>
+				<button id="btn-signup"><a id="sign" href="index.php">Login</a></button>
+			</div>
+			</section>
+			
+
+			<!---Slider Section ends------->
+
+			<!---confirm password validation Start------->
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+$('#cpwd').keyup(function(){
+	var pwd=$('#pwd').val();
+	var cpwd=$('#cpwd').val();
+	if (cpwd!=pwd) 
+	{
+		$('#errorlabel').html('**password are not matched');
+		$('#errorlabel').css('color','red');
+		return false;
+	}
+	else
+	{
+		$('#errorlabel').html('');
+		return true;
+	}
+});
+
+});
+
+</script>
+         <!---confirm password validation end------->
+
+       
+
+<script src="js/jquery.ripples-min.js" type="text/javascript"></script>
+<script src="js/typed.min.js" type="text/javascript"></script>
+
+</body>
+</html>
